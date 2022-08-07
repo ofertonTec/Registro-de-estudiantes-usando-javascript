@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistroEstudiantes</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <form class="form">
+        <h3>Nuevo Alumno</h3>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="nombre" placeholder="nombre">
+            <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="apellido" placeholder="apellido">
+            <label for="apellido">Apellidos</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="dni" placeholder="dni">
+            <label for="dni">Dni</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="peso" placeholder="peso">
+            <label for="peso">Peso</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="altura" placeholder="altura">
+            <label for="altura">Altura</label>
+        </div>
+        <button type="button" class="btn btn-primary" id="btnAgregar">Agregar Alumno</button>
+    </form>
+    <table class="table table-striped" id="tabla-pacientes">
+        <ul class="mensajeError">
+
+        </ul>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="buscarAlumno" placeholder="Buscar alumno">
+            <label for="buscarAlumno">Buscar Alumno</label>
+        </div>
+        <h3>Lista de Estudiantes</h3>
+
+        <thead>
+            <th>NOMBRE</th>
+            <th>APELLIDOS</th>
+            <th>DNI</th>
+            <th>PESO</th>
+            <th>ALTURA</th>
+            <th>IMC</th>
+        </thead>
+        <tbody class="pacientes">
+            <tr class="paciente">
+                <td class="info-nombre">Joel</td>
+                <td class="info-apellido">Llacsahuache Copia</td>
+                <td class="info-dni">77277872</td>
+                <td class="info-peso">90</td>
+                <td class="info-altura">1.98</td>
+                <td class="info-imc"></td>
+            </tr>
+            <tr class="paciente">
+                <td class="info-nombre">Pablo</td>
+                <td class="info-apellido">Mendoza García</td>
+                <td class="info-dni">01204130</td>
+                <td class="info-peso">80</td>
+                <td class="info-altura">1.98</td>
+                <td class="info-imc"></td>
+            </tr>
+
+        </tbody>
+        <span id="mensajeBusqueda"></span>
+    </table>
+    <button id="buscar__paciente" class="btn__principal">Buscar Pacientes</button>
+    <script src="js/index.js"></script>
+    <script src="js/agregarAlumno.js"></script>
+    <script src="js/eliminarAlumno.js"></script>
+    <script src="js/buscarAlumno.js"></script>
+    <script src="js/buscarPaciente.js"></script>
+</body>
+
+</html>
