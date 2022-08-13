@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegistroPacientes</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/1aa7d7ac13.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container">
@@ -14,27 +15,30 @@
         <img src="img/hospital.png" alt="">
         <a href="#sobre_nosotros">clinicainternacional@gmail.com.pe</a>
     </header>
+    
     <main class="contenido">
         <div class="contenedor_formulario">
-            <h3>Nuevo Paciente</h3><hr>
+            <h3>Nuevo Paciente</h3>
+            <hr>
+            <ul class="mensajeError"></ul>
             <form class="formulario">
-                <div class="input">
+                <div class="form_item">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="nombre">
                 </div>
-                <div class="input">
+                <div class="form_item">
                     <label for="apellido">Apellidos</label>
                     <input type="text" class="form-control" id="apellido" placeholder="apellido">
                 </div>
-                <div class="input">
+                <div class="form_item">
                     <label for="dni">Dni</label>
                     <input type="text" class="form-control" id="dni" placeholder="dni">
                 </div>
-                <div class="input">
+                <div class="form_item">
                     <label for="peso">Peso</label>
                     <input type="text" class="form-control" id="peso" placeholder="peso">
                 </div>
-                <div class="input">
+                <div class="form_item">
                     <label for="altura">Altura</label>
                     <input type="text" class="form-control" id="altura" placeholder="altura">
                 </div>
@@ -43,19 +47,19 @@
         </div>
 
         <div class="contenedor_lista">
-            <ul class="mensajeError"></ul>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="buscarAlumno" placeholder="Buscar alumno">
-                <label for="buscarAlumno">Buscar paciente</label>
+            <div class="container_buscar">
+                <input type="text " class="form-control" id="buscarAlumno" placeholder="Buscar paciente">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <h3>Lista de pacientes</h3> <hr>
+            <h3>Lista de pacientes</h3>
+            <hr>
             <table class="tabla" id="tabla-pacientes">
                 <thead>
                     <th>NOMBRE</th>
                     <th>APELLIDOS</th>
                     <th>DNI</th>
-                    <th>PESO</th>
-                    <th>ALTURA</th>
+                    <th class="peso">PESO</th>
+                    <th class="altura">ALTURA</th>
                     <th>IMC</th>
                 </thead>
                 <tbody class="pacientes">
@@ -73,6 +77,22 @@
                         <td class="info-dni">01204130</td>
                         <td class="info-peso">80</td>
                         <td class="info-altura">1.98</td>
+                        <td class="info-imc"></td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nombre">Rodrigo</td>
+                        <td class="info-apellido">García Navarro</td>
+                        <td class="info-dni">02011041</td>
+                        <td class="info-peso">89</td>
+                        <td class="info-altura">1.97</td>
+                        <td class="info-imc"></td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nombre">Esteban</td>
+                        <td class="info-apellido">Carbajal Molina</td>
+                        <td class="info-dni">02345678</td>
+                        <td class="info-peso">79</td>
+                        <td class="info-altura">1.67</td>
                         <td class="info-imc"></td>
                     </tr>
 

@@ -55,67 +55,78 @@ body {
 
 .contenido {
     grid-area: contenido;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2,1fr);
+
 }
 /*ESTILOS DEL FORMULARIO*/
-.contenedor_formulario{
-    padding: 10px;
-}
-.formulario .input{
+
+.form_item{
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    margin: 0 10px;
 }
-.input label{
-    font-size: 18px;
-}
-.input input{
-    font-size: 16px;
-    height: 32px;
+.form_item input{
+    height: 40px;
     border-style: none;
-}
- .btn-primary{
-    width: 150px;
-    height: 32px;
-    background-color: #0a9396;
-    border-style: none;
-    color: #edf2f4;
     font-size: 16px;
-}
-.btn-primary:hover{
-    cursor: pointer;
-    font-size: 17px
+    padding-left: 10px;
 }
 
-/*ESTILOS DE LA LISTA*/
-#buscarAlumno{
-    height: 32px;
+.form_item label{
+ font-size: 16px;
+ line-height: 30px;
+}
+#btnAgregar{
+    width: 30%;
+    height: 40px;
+    margin-top: 32px;
+    margin: 32px 10px;
+    background-color: #024e55;
     border-style: none;
-    padding-left: 20px;
+    font-size: 16px;
+    color: #ffff;
+}
+/*ESTILOS DE LA LISTA*/
+.container_buscar{
+    position: relative;
+    align-content: center;
+}
+#buscarAlumno{
+    width: 50%;
+    height: 40px;
+    border-style: none;
+    padding-left: 10px;
+}
+.fa-magnifying-glass{
+    position: absolute;
+    right: 52%;
+    top: 30%;
 }
 
 .contenedor_lista{
-    background-color: #0a9396;
+    background-color: #58acad;
     padding: 10px;
 }
 #buscar__paciente{
     margin-top: 32px;
-    width: 150px;
-    height: 32px;
-    background-color: #006d77;
+    width: 30%;
+    height: 40px;
+    background-color: #024e55;
     border-style: none;
     color: #edf2f4;
     font-size: 16px;
 }
 .tabla{
-    display: flex;
-    flex-direction: column;
-    background-color: #e9d8a6;
-    width: 100%;
     border-collapse: collapse;
 }
 th, td{
-    font-size: 10px;
+    width: 100%;
+    font-size: 12px;
     padding: 12px;
+    text-align: center;
 }
 th{
     color: white;
@@ -130,5 +141,19 @@ tr:nth-child(even){
 .footer {
     grid-area: footer;
     background-color: #0a9396;
+    text-align: center;
+}
+
+/*Mensaje error*/
+.mensajeError, #mensajeBusqueda{
+    font-size: 13px;
+    color:#500707; 
+}
+
+@media screen and (max-width: 500px) {
+    .contenido{
+        grid-template-columns: repeat(1,1fr);
+
+    }
 }
 
