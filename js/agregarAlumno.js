@@ -2,7 +2,7 @@
 var btnAgregar = document.querySelector("#btnAgregar");
 var tabla = document.querySelector(".pacientes");
 btnAgregar.addEventListener("click", function () {
-    var form = document.querySelector(".form");
+    var form = document.querySelector(".formulario");
     var alumno = crearAlumno(form);
 
     var errores = validarAlumno(alumno);

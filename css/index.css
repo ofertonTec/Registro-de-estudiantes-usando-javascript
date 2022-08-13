@@ -87,7 +87,48 @@ body {
 }
 
 /*ESTILOS DE LA LISTA*/
+#buscarAlumno{
+    height: 32px;
+    border-style: none;
+    padding-left: 20px;
+}
 
+.contenedor_lista{
+    background-color: #0a9396;
+    padding: 10px;
+}
+#buscar__paciente{
+    margin-top: 32px;
+    width: 150px;
+    height: 32px;
+    background-color: #006d77;
+    border-style: none;
+    color: #edf2f4;
+    font-size: 16px;
+}
+.tabla{
+    display: flex;
+    flex-direction: column;
+    background-color: #e9d8a6;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    font-size: 10px;
+    padding: 12px;
+}
+th{
+    color: white;
+}
+thead{
+    background-color: #001219;
+    border-bottom: solid 3px #94d2bd;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
 .footer {
     grid-area: footer;
+    background-color: #0a9396;
 }
+
