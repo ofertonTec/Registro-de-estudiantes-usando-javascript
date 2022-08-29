@@ -1,9 +1,3 @@
-body {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-
-}
 
 .mensajeError {
     list-style: none;
@@ -23,137 +17,101 @@ body {
     color: red;
 }
 
-/*Estilos para el body*/
-.container {
-    background-color: #94d2bd;
+body{
+    margin: 0;
+    padding: 0;
 }
-
-/*Estilos del header*/
-.header ,.contenido ,footer{
-    padding: 16px 18px;
+.contenedor{
+    background-image: url("/img/fnd-login.jpg");
 }
-.header {
-    grid-area: header;
-    background-color: #0a9396;
+.header{
+    background: #00a39c;
+    height: 50px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 16px;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
-.header img {
-    width: 100px;
+.header img{
+    width: 20%;
 }
-.header a{
-    font-size: 22px;
+.list_contacto a{
+    color: #fff;
     text-decoration: none;
-    color: #edf2f4;
+    
 }
-.header a:hover{
+.titulo_form{
+    color: #004078;
+    font-size: 22px;
     font-weight: bold;
 }
-
-
-.contenido {
-    grid-area: contenido;
+.contenido{
     display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(2,1fr);
-
+    grid-auto-flow: column;
+    padding: 50px 0;
 }
-/*ESTILOS DEL FORMULARIO*/
-
-.form_item{
-    padding-top: 15px;
+.formSection{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+}
+.form_container .form_item{
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    padding-top: 12px;
+}
+.form_item label{
+    font-size: 18px;
+    color: #004078;
 }
 .form_item input{
+    height: 32px;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+}
+.form_item button{
     height: 40px;
+    background-color: #ffa000 !important;
     border-style: none;
+    border-radius: 3px;
     font-size: 16px;
-    padding-left: 10px;
+    color: #fff;
 }
-
-.form_item label{
- font-size: 16px;
- line-height: 30px;
+.listSection{
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-#btnAgregar{
-    width: 30%;
-    height: 40px;
-    margin-top: 32px;
-    margin: 32px 10px;
-    background-color: #024e55;
-    border-style: none;
+.footer{
+    background-color: #00a39c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
-    color: #ffff;
-}
-/*ESTILOS DE LA LISTA*/
-.container_buscar{
-    position: relative;
-    align-content: center;
-}
-#buscarAlumno{
-    width: 50%;
-    height: 40px;
-    border-style: none;
-    padding-left: 10px;
-}
-.fa-magnifying-glass{
-    position: absolute;
-    right: 52%;
-    top: 30%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
-.contenedor_lista{
-    background-color: #58acad;
-    padding: 10px;
-}
-#buscar__paciente{
-    margin-top: 32px;
-    width: 30%;
-    height: 40px;
-    background-color: #024e55;
-    border-style: none;
-    color: #edf2f4;
-    font-size: 16px;
-}
-.tabla{
-    border-collapse: collapse;
-}
-th, td{
-    width: 100%;
-    font-size: 12px;
-    padding: 12px;
-    text-align: center;
-}
-th{
-    color: white;
-}
-thead{
-    background-color: #001219;
-    border-bottom: solid 3px #94d2bd;
-}
-tr:nth-child(even){
-    background-color: #ddd;
-}
-.footer {
-    grid-area: footer;
-    background-color: #0a9396;
-    text-align: center;
-}
 
-/*Mensaje error*/
-.mensajeError, #mensajeBusqueda{
-    font-size: 13px;
-    color:#500707; 
-}
 
-@media screen and (max-width: 500px) {
+@media (max-width:768px){
+    .header{
+    }
     .contenido{
-        grid-template-columns: repeat(1,1fr);
-
+        grid-auto-flow: row;
     }
 }
 

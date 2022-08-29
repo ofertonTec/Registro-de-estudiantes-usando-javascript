@@ -2,7 +2,7 @@
 var btnAgregar = document.querySelector("#btnAgregar");
 var tabla = document.querySelector(".pacientes");
 btnAgregar.addEventListener("click", function () {
-    var form = document.querySelector(".formulario");
+    var form = document.querySelector(".form_container");
     var alumno = crearAlumno(form);
 
     var errores = validarAlumno(alumno);
@@ -12,7 +12,7 @@ btnAgregar.addEventListener("click", function () {
     }else{
         adicionarNuevoAlumnoTabla(alumno);
         form.reset();
-        var errores = document.querySelector(".mensajeError");
+        var errores = document.querySelector(".mensaje_error");
         errores.innerHTML="";
     }
     

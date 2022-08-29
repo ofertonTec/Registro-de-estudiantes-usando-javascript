@@ -10,107 +10,125 @@
     <script src="https://kit.fontawesome.com/1aa7d7ac13.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
-    <header class="header">
-        <img src="img/hospital.png" alt="">
-        <a href="#sobre_nosotros">clinicainternacional@gmail.com.pe</a>
-    </header>
+<body>
+    <div class="contenedor">
+        <header class="header">
+                <img src="https://www.sisol.gob.pe/wp-content/themes/sisol/assets/images/logo-blanco.svg" class="logo"
+                    alt="SISOL Salud">
+                <div class="list_contacto">
+                    <a href="" class="item_contacto">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="" class="item_contacto">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="" class="item_contacto">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+        </header>
+        <main class="contenido">
+            <section class="formSection">
+                <div class="descripcion_form">
+                    <p class="titulo_form"> Nuevo Paciente</p>
+                    <ul class="mensaje_error"></ul>
+                </div>
+                <form action="" class="form_container">
+                    <div class="form_item">
+                        <label for="nombre" class="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                    </div>
+                    <div class="form_item">
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="apellido">
+                    </div>
+                    <div class="form_item">
+                        <label for="dni">Dni</label>
+                        <input type="text" class="form-control" id="dni" placeholder="dni">
+                    </div>
+                    <div class="form_item">
+                        <label for="peso">Peso</label>
+                        <input type="text" class="form-control" id="peso" placeholder="peso">
+                    </div>
+                    <div class="form_item">
+                        <label for="altura">Altura</label>
+                        <input type="text" class="form-control" id="altura" placeholder="altura">
+                    </div>
+                    <div class="form_item">
+                        <button type="button" class="btn btn-primary" id="btnAgregar">Agregar Paciente</button>
+                    </div>
+                   
+                </form>
+            </section>
     
-    <main class="contenido">
-        <div class="contenedor_formulario">
-            <h3>Nuevo Paciente</h3>
-            <hr>
-            <ul class="mensajeError"></ul>
-            <form class="formulario">
-                <div class="form_item">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="nombre">
+            <section class="listSection">
+                <div class="container_search">
+                    <input type="text " class="form-control" id="buscarAlumno" placeholder="Buscar paciente">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="form_item">
-                    <label for="apellido">Apellidos</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="apellido">
+                <div class="description_list">
+                    <p class="title_list">Lista de pacientes</p>
+                    <hr>
                 </div>
-                <div class="form_item">
-                    <label for="dni">Dni</label>
-                    <input type="text" class="form-control" id="dni" placeholder="dni">
-                </div>
-                <div class="form_item">
-                    <label for="peso">Peso</label>
-                    <input type="text" class="form-control" id="peso" placeholder="peso">
-                </div>
-                <div class="form_item">
-                    <label for="altura">Altura</label>
-                    <input type="text" class="form-control" id="altura" placeholder="altura">
-                </div>
-                <button type="button" class="btn btn-primary" id="btnAgregar">Agregar Paciente</button>
-            </form>
-        </div>
+                <table class="container_list" id="tabla-pacientes">
+                    <thead class="header_list">
+                        <th>NOMBRE</th>
+                        <th>APELLIDOS</th>
+                        <th>DNI</th>
+                        <th class="peso">PESO</th>
+                        <th class="altura">ALTURA</th>
+                        <th>IMC</th>
+                    </thead>
+                    <tbody class="pacientes">
+                        <tr class="paciente">
+                            <td class="info-nombre">Joel</td>
+                            <td class="info-apellido">Llacsahuache Copia</td>
+                            <td class="info-dni">77277872</td>
+                            <td class="info-peso">90</td>
+                            <td class="info-altura">1.98</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                        <tr class="paciente">
+                            <td class="info-nombre">Pablo</td>
+                            <td class="info-apellido">Mendoza García</td>
+                            <td class="info-dni">01204130</td>
+                            <td class="info-peso">80</td>
+                            <td class="info-altura">1.98</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                        <tr class="paciente">
+                            <td class="info-nombre">Rodrigo</td>
+                            <td class="info-apellido">García Navarro</td>
+                            <td class="info-dni">02011041</td>
+                            <td class="info-peso">89</td>
+                            <td class="info-altura">1.97</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                        <tr class="paciente">
+                            <td class="info-nombre">Esteban</td>
+                            <td class="info-apellido">Carbajal Molina</td>
+                            <td class="info-dni">02345678</td>
+                            <td class="info-peso">79</td>
+                            <td class="info-altura">1.67</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                    </tbody>
+                    <span id="mensajeBusqueda"></span>
+                </table>
+                <button id="buscar__paciente" type="button" class="btn btn-primary">Buscar Pacientes</button>
+    
+            </section>
+        </main>
+       
 
-        <div class="contenedor_lista">
-            <div class="container_buscar">
-                <input type="text " class="form-control" id="buscarAlumno" placeholder="Buscar paciente">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <h3>Lista de pacientes</h3>
-            <hr>
-            <table class="tabla" id="tabla-pacientes">
-                <thead>
-                    <th>NOMBRE</th>
-                    <th>APELLIDOS</th>
-                    <th>DNI</th>
-                    <th class="peso">PESO</th>
-                    <th class="altura">ALTURA</th>
-                    <th>IMC</th>
-                </thead>
-                <tbody class="pacientes">
-                    <tr class="paciente">
-                        <td class="info-nombre">Joel</td>
-                        <td class="info-apellido">Llacsahuache Copia</td>
-                        <td class="info-dni">77277872</td>
-                        <td class="info-peso">90</td>
-                        <td class="info-altura">1.98</td>
-                        <td class="info-imc"></td>
-                    </tr>
-                    <tr class="paciente">
-                        <td class="info-nombre">Pablo</td>
-                        <td class="info-apellido">Mendoza García</td>
-                        <td class="info-dni">01204130</td>
-                        <td class="info-peso">80</td>
-                        <td class="info-altura">1.98</td>
-                        <td class="info-imc"></td>
-                    </tr>
-                    <tr class="paciente">
-                        <td class="info-nombre">Rodrigo</td>
-                        <td class="info-apellido">García Navarro</td>
-                        <td class="info-dni">02011041</td>
-                        <td class="info-peso">89</td>
-                        <td class="info-altura">1.97</td>
-                        <td class="info-imc"></td>
-                    </tr>
-                    <tr class="paciente">
-                        <td class="info-nombre">Esteban</td>
-                        <td class="info-apellido">Carbajal Molina</td>
-                        <td class="info-dni">02345678</td>
-                        <td class="info-peso">79</td>
-                        <td class="info-altura">1.67</td>
-                        <td class="info-imc"></td>
-                    </tr>
-
-                </tbody>
-                <span id="mensajeBusqueda"></span>
-            </table>
-            <button id="buscar__paciente" class="btn__principal">Buscar Pacientes</button>
-        </div>
-    </main>
-
-    <script src="js/index.js"></script>
-    <script src="js/agregarAlumno.js"></script>
-    <script src="js/eliminarAlumno.js"></script>
-    <script src="js/buscarAlumno.js"></script>
-    <script src="js/buscarPaciente.js"></script>
-    <footer class="footer">
-        <p>Desarrollado by &copy;Joel Llacsahuache Copia 2022</p>
-    </footer>
+        <footer class="footer">
+            <p>Desarrollado by &copy;Joel Llacsahuache Copia 2022</p>
+        </footer>
+        <script src="js/index.js"></script>
+        <script src="js/agregarAlumno.js"></script>
+        <script src="js/eliminarAlumno.js"></script>
+        <script src="js/buscarAlumno.js"></script>
+        <script src="js/buscarPaciente.js"></script>
 </body>
 
 </html>
