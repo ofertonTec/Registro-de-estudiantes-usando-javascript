@@ -42,6 +42,7 @@ body{
 .list_contacto a{
     color: #fff;
     text-decoration: none;
+    width: 30%;
     
 }
 .titulo_form{
@@ -56,6 +57,8 @@ body{
 }
 .formSection{
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
     padding: 10px 20px;
     margin: 10px;
 }
