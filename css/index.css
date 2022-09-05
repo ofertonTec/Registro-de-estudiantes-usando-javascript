@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 16px;
+    padding: 0px 10px;
     position: fixed;
     left: 0;
     right: 0;
@@ -44,7 +44,7 @@ body {
 .list_contacto a {
     color: #fff;
     text-decoration: none;
-    width: 30%;
+    min-width: 30%;
 
 }
 
@@ -137,8 +137,6 @@ body {
 
 
 @media (max-width:768px) {
-    .header {}
-
     .contenido {
         grid-auto-flow: row;
     }
